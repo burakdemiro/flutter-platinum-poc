@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:video_player/video_player.dart';
 import 'package:scratcher/scratcher.dart';
+import 'dart:async';
 
 void main() {
-  runApp(MaterialApp(home: SplashVideo()));
+  runApp(MaterialApp(home: SplashRoute()));
 }
 
 class SplashVideo extends StatefulWidget {
@@ -38,7 +40,6 @@ class SplashVideoState extends State<SplashVideo> {
     });
 
     scratcherWater = getScratcherSplash();
-
     _controller.play();
 
     super.initState();
@@ -131,6 +132,29 @@ class HomeRoute extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body: Center(child: Text('Hello Platinum')),
+    );
+  }
+}
+
+class SplashRoute extends StatefulWidget {
+  SplashRoute() : super();
+
+  @override
+  State<StatefulWidget> createState() => SplashState();
+}
+
+class SplashState extends State<SplashRoute> {
+  @override
+  Widget build(BuildContext context) {
+    Timer(Duration(seconds: 10), () {
+      setState(() {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => SplashVideo()));
+      });
+    });
+
+    return Scaffold(
+      body: Center(child: Lottie.asset('assets/lottie_loading.json')),
     );
   }
 }
