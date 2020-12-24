@@ -3,7 +3,7 @@ import 'package:video_player/video_player.dart';
 import 'package:scratcher/scratcher.dart';
 
 void main() {
-  runApp(SplashVideo());
+  runApp(MaterialApp(home: SplashVideo()));
 }
 
 class SplashVideo extends StatefulWidget {
@@ -99,6 +99,7 @@ class SplashVideoState extends State<SplashVideo> {
   Scratcher getScratcherSplash() {
     return Scratcher(
         brushSize: 30,
+        threshold: 30,
         accuracy: ScratchAccuracy.low,
         image: imageWaterBg,
         child: Container(
@@ -114,6 +115,22 @@ class SplashVideoState extends State<SplashVideo> {
                 color: Colors.white,
               ),
             )),
-            color: Color.fromARGB(255, 52, 72, 92)));
+            color: Color.fromARGB(255, 52, 72, 92)),
+        onThreshold: () => {
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => HomeRoute()))
+            });
+  }
+}
+
+class HomeRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home Page"),
+      ),
+      body: Center(child: Text('Hello Platinum')),
+    );
   }
 }
