@@ -147,7 +147,7 @@ class SplashRoute extends StatefulWidget {
 class SplashState extends State<SplashRoute> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 8), () {
+    Timer(Duration(seconds: 15), () {
       setState(() {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SplashVideo()));
@@ -155,7 +155,6 @@ class SplashState extends State<SplashRoute> {
     });
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 17, 25, 31),
       body: Center(child: Lottie.asset('assets/lottie_loading.json')),
     );
   }
