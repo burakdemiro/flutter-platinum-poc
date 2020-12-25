@@ -54,6 +54,7 @@ class SplashVideoState extends State<SplashVideo> {
   @override
   Widget build(BuildContext context) {
     var scaffold = Scaffold(
+        backgroundColor: Color.fromARGB(255, 17, 25, 31),
         appBar: AppBar(
           title: Text("Flutter Platinum"),
         ),
@@ -146,7 +147,7 @@ class SplashRoute extends StatefulWidget {
 class SplashState extends State<SplashRoute> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 10), () {
+    Timer(Duration(seconds: 8), () {
       setState(() {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SplashVideo()));
@@ -154,6 +155,7 @@ class SplashState extends State<SplashRoute> {
     });
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 17, 25, 31),
       body: Center(child: Lottie.asset('assets/lottie_loading.json')),
     );
   }
