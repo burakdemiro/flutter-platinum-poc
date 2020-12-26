@@ -3,9 +3,12 @@ import 'package:lottie/lottie.dart';
 import 'package:video_player/video_player.dart';
 import 'package:scratcher/scratcher.dart';
 import 'dart:async';
+import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MaterialApp(home: SplashRoute()));
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(MaterialApp(home: SplashRoute())));
 }
 
 class SplashVideo extends StatefulWidget {
@@ -147,7 +150,7 @@ class SplashRoute extends StatefulWidget {
 class SplashState extends State<SplashRoute> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 15), () {
+    Timer(Duration(seconds: 8), () {
       setState(() {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SplashVideo()));
