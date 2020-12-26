@@ -1,4 +1,4 @@
-package com.example.flutter_video_player
+package com.turkcell.platinum.flutter
 
 import io.flutter.embedding.android.FlutterActivity
 
