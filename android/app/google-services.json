@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801306949858",
+    "project_id": "platinum-flutter",
+    "storage_bucket": "platinum-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801306949858:android:a326cecc91db86c49946bb",
+        "android_client_info": {
+          "package_name": "com.turkcell.platinum.flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801306949858-djav93ovqdrfodu60cd1nkjqepobfn5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdGyvp_pe5hDEZ5fCeRG6Dh0-4-YXyynQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801306949858-djav93ovqdrfodu60cd1nkjqepobfn5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
